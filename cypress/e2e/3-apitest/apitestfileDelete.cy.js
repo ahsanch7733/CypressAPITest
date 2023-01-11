@@ -4,7 +4,7 @@ describe('api test cases', () => {
     var payload = ""
 
 
-    it('Post Method', function() {
+    it('Delete Method Call', function() {
         cy.request({
             method: 'DELETE',
             url: "https://reqres.in/api/users/1",
@@ -15,7 +15,7 @@ describe('api test cases', () => {
 
 
 
-    it('Post chaining Method get', function() {
+    it('Post chaining Method Delete', function() {
         cy.request({
             method: 'POST',
             url: "https://reqres.in/api/users/1",

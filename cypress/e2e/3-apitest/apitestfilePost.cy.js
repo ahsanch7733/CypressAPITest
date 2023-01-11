@@ -4,7 +4,7 @@ describe('api test cases', () => {
     var payload = ""
 
 
-    it('Post Method', function() {
+    it('Post Method Call', function() {
         cy.request({
             method: 'POST',
             url: "https://reqres.in/api/users",
@@ -17,7 +17,7 @@ describe('api test cases', () => {
         })
     })
 
-    it('Post Method property', function() {
+    it('Post Method verify property', function() {
         cy.request({
             method: 'POST',
             url: "https://reqres.in/api/users",

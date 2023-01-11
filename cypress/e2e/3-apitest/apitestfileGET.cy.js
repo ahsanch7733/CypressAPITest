@@ -27,7 +27,7 @@ describe('api test cases', () => {
     })
 
 
-    it('get user by json', () => {
+    it('get user verify json', () => {
         cy.request({
                 method: 'GET',
                 url: 'https://reqres.in/api/users/2',
@@ -36,7 +36,7 @@ describe('api test cases', () => {
             .should('include', 'application/json')
     })
 
-    it('get user by  deepid', () => {
+    it('get user by verify deep equal data', () => {
         cy.request({
             method: 'GET',
             url: 'https://reqres.in/api/users/2',
