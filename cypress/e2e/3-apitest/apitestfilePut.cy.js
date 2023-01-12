@@ -4,7 +4,7 @@ describe('api test cases', () => {
     var payload = ""
 
 
-    it('PUT Method', function() {
+    it('Verify the Response code(200)', function() {
         cy.request({
             method: 'PUT',
             url: "https://reqres.in/api/users/1",
@@ -17,7 +17,7 @@ describe('api test cases', () => {
         })
     })
 
-    it('PUT Method verify property', function() {
+    it('Verify Data elements are created as per the requests for body data', function() {
         cy.request({
             method: 'PUT',
             url: "https://reqres.in/api/users/1",
@@ -33,7 +33,7 @@ describe('api test cases', () => {
         })
     })
 
-    it('Post chaining Method PUT', function() {
+    it('Verify POST Chaining with PUT Call by updating the newly created data', function() {
         cy.request({
             method: 'POST',
             url: "https://reqres.in/api/users/1",

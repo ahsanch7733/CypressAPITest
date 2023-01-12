@@ -4,7 +4,7 @@ describe('api test cases', () => {
     var payload = ""
 
 
-    it('Post Method Call', function() {
+    it('Verify the Response code(201)', function() {
         cy.request({
             method: 'POST',
             url: "https://reqres.in/api/users",
@@ -17,7 +17,7 @@ describe('api test cases', () => {
         })
     })
 
-    it('Post Method verify property', function() {
+    it('Verify Data elements are created as per the requests for body data', function() {
         cy.request({
             method: 'POST',
             url: "https://reqres.in/api/users",
@@ -33,7 +33,7 @@ describe('api test cases', () => {
         })
     })
 
-    it('Post chaining Method get', function() {
+    it('Verify POST Chaining with GET CALL by retrieving newly created data', function() {
         cy.request({
             method: 'POST',
             url: "https://reqres.in/api/users",

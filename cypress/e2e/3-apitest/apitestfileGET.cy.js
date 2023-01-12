@@ -9,14 +9,14 @@ describe('api test cases', () => {
             url: 'https://reqres.in/api/users/',
         })
 
-    it('get user', () => {
+    it('Verify the Response code(200)', () => {
         getUsers().then((res) => {
             expect(res.status).to.eq(200)
 
         })
     })
 
-    it('get user by id', () => {
+    it('Verify body data first tag', () => {
         cy.request({
             method: 'GET',
             url: 'https://reqres.in/api/users/2',
@@ -27,7 +27,7 @@ describe('api test cases', () => {
     })
 
 
-    it('get user verify json', () => {
+    it('Verify Content-type is JSON.', () => {
         cy.request({
                 method: 'GET',
                 url: 'https://reqres.in/api/users/2',
@@ -36,7 +36,7 @@ describe('api test cases', () => {
             .should('include', 'application/json')
     })
 
-    it('get user by verify deep equal data', () => {
+    it('Verify Complete body with deep.equals', () => {
         cy.request({
             method: 'GET',
             url: 'https://reqres.in/api/users/2',
